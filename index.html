@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- COMPATIVEL COM OUTROS DISPOSITIVOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Davi Jonatas Costa</title>
     <!-- Exibindo ícone -->
 <link rel="shortcut icon" href="jquery.js.png.ico" type="image/x-icon" />
+    
    <!-- codigo em javascript nome passando no cabeçario --> 
-    <script language='JavaScript'>
-var txt= '   ' + document.title + '   '
-var tempo=90;
-var refresco=null;
-function titulo() {
-document.title=txt;
-txt=txt.substring(1,txt.length)+txt.charAt(0); refresco=setTimeout("titulo()",tempo);}
-titulo();
-</script>  
+    <script type="text/javascript">
+function tb8_makeArray(n){
+this.length = n;
+return this.length;
+}
+
+tb8_messages = new tb8_makeArray(3);
+tb8_messages[0] = "→ Davi Jonatas Costa ";
+tb8_messages[1] = "→ Davi Jonatas Costa ";
+tb8_messages[2] = "→ Davi Jonatas Costa ";
+tb8_rptType = 'infinite';
+tb8_rptNbr = 5;
+tb8_speed = 100;
+tb8_delay = 2000;
+var tb8_counter=1;
+var tb8_currMsg=0;
+var tb8_tekst ="";
+var tb8_i=0;
+var tb8_TID = null;
+function tb8_pisi(){
+tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);
+document.title = tb8_tekst;
+tb8_sp=tb8_speed;
+tb8_i++;
+if (tb8_i==tb8_messages[tb8_currMsg].length){
+tb8_currMsg++; tb8_i=0; tb8_tekst="";tb8_sp=tb8_delay;
+}
+if (tb8_currMsg == tb8_messages.length){
+if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)){
+clearTimeout(tb8_TID);
+return;
+}
+tb8_counter++;
+tb8_currMsg = 0;
+}
+tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+}
+tb8_pisi()
+</script> 
+    
 <!-- imagem em backgroud -->
 <img alt="imag background" align="right" src="https://image.ibb.co/hZ9P38/backgroundp.png" alt="backgroundp" /> 
     
@@ -40,14 +74,15 @@ titulo();
                                              
   <h3>Objetivo</h3>
 
-<h4>Descreve aqui em qual área gostaria de atuar dentro da empresa, seja breve e objetivo</h4> 
+<h4>Descreve aqui em qual área gostaria de atuar dentro da empresa, seja breve e objetivo.</h4> 
 <h3>Formação acadêmica</h3>
-<h4>2001 - 2003 - Coloque aqui nome do curso, e nome da escola</h4>
+<h4>2001 - 2003 - Coloque aqui nome do curso, e nome da escola.</h4>
 <h3>Experiência Profissional</h3>
 <h4>2015 - Nome da empresa atual.</h4>
-<h4>Cargo: Coloque o cargo atual que você ocupa nesta empresa</h4> 
+<h4>Cargo: Coloque o cargo atual que você ocupa nesta empresa.</h4> 
 <h3>Informações adicionais</h3>
 <h4>Coloque aqui informações que acha relevante para esta vaga. </h4>
+    
    <!-- botão linkedin -->
     <a href="https://www.linkedin.com/in/davijonatascosta/" target="_blank"> 
 <img src="https://i.pinimg.com/236x/13/a0/6e/13a06ebee7df062e713255852b7185bd.jpg" height="50" width="50"> 
